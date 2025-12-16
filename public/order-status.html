@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShop | Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Order Status</h1>
+        <p>Order ID: <span id="order-id-display">...</span></p>
+
+        <div id="status-container">
+            <div class="loader" id="loader"></div>
+            <div class="status-badge status-pending_payment" id="status-badge">PENDING PAYMENT</div>
+        </div>
+
+        <p id="message" style="margin-top: 20px;">Waiting for payment confirmation...</p>
+
+        <button onclick="window.location.href='index.html'" style="margin-top: 20px; display: none;" id="home-btn">Shop
+            Again</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Start polling when page loads
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('orderId');
+        if (orderId) {
+            document.getElementById('order-id-display').innerText = orderId.substring(0, 8) + '...';
+            pollOrderStatus(orderId);
+        } else {
+            document.getElementById('message').innerText = "No Order ID found.";
+            document.getElementById('loader').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

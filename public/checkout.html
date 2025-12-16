@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShop | Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <p>Complete your order</p>
+
+        <div style="text-align: left; margin-top: 20px;">
+            <label>Full Name</label>
+            <input type="text" id="name" value="John Doe">
+
+            <label>Email Address</label>
+            <input type="email" id="email" value="john@example.com">
+
+            <label>Shipping Address</label>
+            <input type="text" id="address" value="101 Neo Tokyo St.">
+        </div>
+
+        <div class="price">Total: $10.00</div>
+
+        <button id="pay-btn" onclick="initiatePayment()">Pay with Bitcoin</button>
+        <p id="error-msg" style="color: var(--secondary); display: none;"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
