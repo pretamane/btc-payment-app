@@ -1,6 +1,6 @@
 # ₿ BTCPay Node.js Integration Demo
 
-A lightweight, robust Node.js application demonstrating how to integrate **BTCPay Server** for processing Bitcoin payments in an e-commerce flow.
+A production-ready Node.js integration for **BTCPay Server**, demonstrating secure Bitcoin payment processing, real-time webhook handling, and a seamless e-commerce checkout flow.
 
 This project simulates a digital storefront ("CyberShop") where users can purchase a "Cyberpunk Hoodie" using Bitcoin. It handles the full lifecycle: order creation, invoice generation, payment redirection, and real-time status updates via webhooks and polling.
 
